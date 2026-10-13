@@ -1,0 +1,19 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    WD["Directorio de trabajo"]
+    SA["Área de preparación"]
+    LR[("Repositorio local")]
+    RR[("Repositorio remoto")]
+    ST[("Stash")]
+
+    WD -- "git add" --> SA
+    SA -- "git commit" --> LR
+    LR -- "git push" --> RR
+    RR -- "git fetch" --> LR
+    RR -- "git pull" --> WD
+    RR -- "git clone" --> WD
+    LR -- "git switch / checkout" --> WD
+    SA -- "git restore --staged" --> WD
+    LR -- "git restore" --> WD
+    WD -- "git stash" --> ST
+    ST -- "git stash pop" --> WD

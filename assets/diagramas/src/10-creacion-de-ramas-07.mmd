@@ -1,0 +1,6 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph RL
+    H(["HEAD (detached)"]) --> N["nuevo commit sin rama ⚠️"]
+    N --> V1["v1"]
+    R1(["rama1"]) --> X["commit rama1"] --> V1
+    M(["master"]) --> Y["…"] --> V1

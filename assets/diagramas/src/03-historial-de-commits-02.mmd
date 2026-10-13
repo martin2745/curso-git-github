@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant U as Usuario
+    participant H as HEAD
+    U->>H: git checkout 8b670f6
+    Note over H: HEAD en commit 1 (detached)
+    U->>H: git checkout c578
+    Note over H: HEAD en commit 2 (detached)
+    U->>H: git checkout master
+    Note over H: HEAD -> master (commit 3)

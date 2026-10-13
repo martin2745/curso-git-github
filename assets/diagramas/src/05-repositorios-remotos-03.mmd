@@ -1,0 +1,5 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    R[("Remoto")] -- "git fetch" --> RR["origin/main (rama remota local)"]
+    RR -- "git merge" --> M["main (tu rama)"]
+    R -. "git pull = fetch + merge" .-> M

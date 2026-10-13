@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TD
+    A["Dos historias divergentes se van a fusionar"] --> B{"¿Cambian el mismo archivo?"}
+    B -- "No" --> OK["Fusión automática ✅"]
+    B -- "Sí" --> C{"¿Cambian las mismas líneas?"}
+    C -- "No" --> OK
+    C -- "Sí" --> K["CONFLICTO ⚠️ Resolución manual"]

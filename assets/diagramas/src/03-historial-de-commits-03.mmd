@@ -1,0 +1,6 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph RL
+    MASTER(["master"]) --> C3["Commit 3"]
+    C3 --> C2["Commit 2"]
+    C2 --> C1["Commit 1"]
+    HEAD(["HEAD"]) -.->|"detached"| C1

@@ -1,0 +1,20 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    subgraph V1["Versión 1"]
+        A1["A"]
+        B1["B"]
+        C1["C"]
+    end
+    subgraph V2["Versión 2"]
+        A2["A1 (cambia)"]
+        B2["B (enlace)"]
+        C2["C1 (cambia)"]
+    end
+    subgraph V3["Versión 3"]
+        A3["A1 (enlace)"]
+        B3["B (enlace)"]
+        C3["C2 (cambia)"]
+    end
+    A1 --> A2 --> A3
+    B1 -.-> B2 -.-> B3
+    C1 --> C2 --> C3

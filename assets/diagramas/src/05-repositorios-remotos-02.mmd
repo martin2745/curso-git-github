@@ -1,0 +1,7 @@
+sequenceDiagram
+    participant L as Repositorio local
+    participant R as origin (GitHub)
+    L->>R: git push -u origin master
+    R-->>L: OK: master -> master
+    Note over L: Rama master sigue a origin/master
+    L->>R: git push (siguientes veces)

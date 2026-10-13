@@ -1,0 +1,6 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    O[("origin")] -- "fetch" --> OM(["origin/main"])
+    T[("teamone")] -- "fetch" --> TM(["teamone/main"])
+    OM --> L[("Repositorio local")]
+    TM --> L

@@ -1,0 +1,15 @@
+%%{init: {'gitGraph': {'mainBranchName': 'master'}}}%%
+gitGraph
+    commit id: "v1" tag: "v1"
+    branch rama1
+    commit id: "rama1.txt"
+    checkout master
+    commit id: "fecha"
+    commit id: "v2" tag: "v2"
+    commit id: "conflicto resuelto"
+    branch autor
+    commit id: "AUTHOR + README"
+    checkout master
+    commit id: "LICENSE (ff licencia)"
+    merge autor id: "Merge autor"
+    merge rama1 id: "Merge rama1"

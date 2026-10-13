@@ -1,5 +1,9 @@
 # Tarea de GitHub 2
 
+> **Autor:** Martín Gil Blanco  
+> **Curso:** Control de versiones con Git en contextos académicos y profesionales  
+> Última revisión: octubre de 2026
+
 ## Objetivo
 
 Organizar un equipo de trabajo para desarrollar un proyecto colaborativo utilizando Git y GitHub. Cada miembro del equipo implementará una o dos funcionalidades, generando Pull Requests (PR) que se fusionarán en una rama de desarrollo antes de ser incorporadas a la rama principal.

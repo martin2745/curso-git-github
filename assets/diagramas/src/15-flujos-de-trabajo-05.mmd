@@ -1,0 +1,22 @@
+gitGraph
+    commit id: "init" tag: "v1.0"
+    branch develop
+    commit id: "d1"
+    branch feature-login
+    commit id: "f1"
+    commit id: "f2"
+    checkout develop
+    merge feature-login id: "merge login"
+    branch release
+    commit id: "ajustes 1.1"
+    checkout main
+    merge release id: "release 1.1" tag: "v1.1"
+    checkout develop
+    merge release id: "sync release"
+    checkout main
+    branch hotfix
+    commit id: "fix urgente"
+    checkout main
+    merge hotfix id: "hotfix 1.1.1" tag: "v1.1.1"
+    checkout develop
+    merge hotfix id: "sync hotfix"

@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    WD["Directorio de trabajo (cambio sin preparar)"] --> SA["Área de preparación (cambio preparado)"] --> C[("Commit local")] --> R[("Commit publicado en el remoto")]
+    WD -.->|deshacer| X1["git restore archivo / git reset --hard"]
+    SA -.->|deshacer| X2["git restore --staged archivo / git reset --hard"]
+    C -.->|deshacer| X3["git reset HEAD~1 / git commit --amend"]
+    R -.->|deshacer| X4["git revert commit"]

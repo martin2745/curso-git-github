@@ -1,0 +1,13 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    subgraph S["git.ourcompany.com (servidor)"]
+        direction RL
+        SM(["main"]) --> s3["f4265"] --> s2["a38de"] --> s1["0b743"]
+    end
+    subgraph L["Tu equipo tras git clone"]
+        direction RL
+        OM(["origin/main"]) --> l3["f4265"]
+        LM(["main"]) --> l3
+        l3 --> l2["a38de"] --> l1["0b743"]
+    end
+    S ~~~ L

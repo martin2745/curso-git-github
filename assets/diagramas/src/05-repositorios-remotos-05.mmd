@@ -1,0 +1,11 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    subgraph A["Opción A: primero el remoto (recomendada)"]
+        direction TB
+        A1["Crear repo en GitHub/GitLab CON README"] --> A2["git clone url"] --> A3["Trabajar: add, commit"] --> A4["git push"]
+    end
+    subgraph B["Opción B: primero el local"]
+        direction TB
+        B1["git init + commits locales"] --> B2["Crear repo remoto SIN README"] --> B3["git remote add origin url"] --> B4["git push -u origin main"]
+    end
+    A ~~~ B

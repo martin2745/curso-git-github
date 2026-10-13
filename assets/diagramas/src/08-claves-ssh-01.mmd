@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant PC as Tu equipo<br/>(clave privada)
+    participant GH as GitHub<br/>(clave pública)
+    PC->>GH: Quiero conectarme como git@github.com
+    GH->>PC: Desafío cifrado/firmado con tu clave pública
+    PC->>PC: Resuelve el desafío con la clave privada
+    PC->>GH: Respuesta
+    GH-->>PC: ✅ Autenticado como tu_usuario
+    Note over PC,GH: La clave privada nunca viaja por la red

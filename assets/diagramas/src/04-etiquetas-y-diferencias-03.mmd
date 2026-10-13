@@ -1,0 +1,8 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    WD["Directorio de trabajo"]
+    SA["Área de preparación"]
+    H[("Último commit (HEAD)")]
+    WD <-- "git diff" --> SA
+    SA <-- "git diff --staged (= --cached)" --> H
+    WD <-- "git diff HEAD" --> H

@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant WD as Directorio de trabajo
+    participant SA as Área de preparación
+    participant R as Repositorio (.git)
+    Note over WD: Editas README.md
+    WD->>SA: git add README.md
+    Note over SA: README.md preparado
+    SA->>R: git commit -m "mensaje"
+    Note over R: Nueva instantánea (commit)
+    R-->>WD: git checkout / git restore<br/>(recuperar una versión)

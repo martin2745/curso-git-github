@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant L as Local
+    participant R as Remoto (GitHub)
+    L->>R: git push
+    R-->>L: ❌ rejected (fetch first)
+    L->>R: git pull (fetch)
+    R-->>L: commits nuevos
+    Note over L: merge → CONFLICT en README.md
+    Note over L: Editar archivo y quitar marcas
+    Note over L: git add + git commit
+    L->>R: git push
+    R-->>L: ✅ OK

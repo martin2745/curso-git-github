@@ -1,0 +1,5 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    A["Trabajo a medias (cambios sin confirmar)"] -- "git stash" --> S[("Pila de stash")]
+    A -.-> B["Directorio limpio → arreglo urgente + commit"]
+    S -- "git stash pop / apply" --> C["Recuperas el trabajo y continúas"]

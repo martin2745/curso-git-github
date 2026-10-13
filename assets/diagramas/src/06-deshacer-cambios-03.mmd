@@ -1,0 +1,15 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    subgraph S["git reset --soft HEAD~1"]
+        direction TB
+        S1["Rama ⟵ HEAD~1"] --> S2["Índice: intacto"] --> S3["Directorio: intacto"]
+    end
+    subgraph M["git reset --mixed HEAD~1"]
+        direction TB
+        M1["Rama ⟵ HEAD~1"] --> M2["Índice ⟵ HEAD~1"] --> M3["Directorio: intacto"]
+    end
+    subgraph H["git reset --hard HEAD~1"]
+        direction TB
+        H1["Rama ⟵ HEAD~1"] --> H2["Índice ⟵ HEAD~1"] --> H3["Directorio ⟵ HEAD~1"]
+    end
+    S ~~~ M ~~~ H

@@ -1,0 +1,4 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    S["/etc/gitconfig --system"] -->|sobrescrito por| G["~/.gitconfig --global"] -->|sobrescrito por| L[".git/config --local"]
+    L --> R(["Valor efectivo"])

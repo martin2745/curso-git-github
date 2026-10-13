@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    U[("upstream repo original")] -- "fork" --> O[("origin tu fork")]
+    O -- "git clone" --> L[("local")]
+    L -- "git push" --> O
+    O -- "Pull Request" --> U
+    U -- "git fetch upstream" --> L

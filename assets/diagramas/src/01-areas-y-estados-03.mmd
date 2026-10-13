@@ -1,0 +1,16 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+stateDiagram-v2
+    direction TB
+    [*] --> SinSeguimiento: Crear archivo
+    SinSeguimiento --> Preparado: git add
+    SinModificar --> Modificado: Editar archivo
+    Modificado --> Preparado: git add
+    Preparado --> SinModificar: git commit
+    Preparado --> Modificado: git restore --staged
+    Modificado --> SinModificar: git restore
+    SinModificar --> SinSeguimiento: git rm --cached
+
+    SinSeguimiento: Sin seguimiento (untracked)
+    SinModificar: Sin modificar (unmodified)
+    Modificado: Modificado (modified)
+    Preparado: Preparado (staged)

@@ -1,0 +1,10 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    S[("Servidor historial completo")]
+    A[("Equipo A historial completo")]
+    B[("Equipo B historial completo")]
+    C[("Equipo C historial completo")]
+    A <--> S
+    B <--> S
+    C <--> S
+    A <-.-> B

@@ -1,0 +1,14 @@
+gitGraph
+    commit id: "init"
+    branch dev
+    commit id: "crear dev"
+    branch funcionalidad1
+    commit id: "F1"
+    checkout dev
+    branch funcionalidad2
+    commit id: "F2"
+    checkout dev
+    merge funcionalidad1 id: "PR #1"
+    merge funcionalidad2 id: "PR #2"
+    checkout main
+    merge dev id: "release" tag: "v1.0"

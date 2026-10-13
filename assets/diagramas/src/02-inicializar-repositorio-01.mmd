@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    A{"¿El proyecto ya existe en un servidor?"}
+    A -- "No" --> B["git init: Convierte una carpeta local en repositorio"]
+    A -- "Sí" --> C["git clone url: Descarga una copia completa con todo el historial"]
+    B --> D[("Repositorio local con .git")]
+    C --> D

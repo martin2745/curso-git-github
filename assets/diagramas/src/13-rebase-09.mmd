@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant A as Persona A
+    participant S as Servidor
+    participant B as Tú
+    A->>S: push C4, C6
+    S->>B: pull (te basas en C4, C6)
+    Note over A: rebase → C4', C6'
+    A->>S: push --force (C4, C6 desaparecen)
+    S->>B: pull
+    Note over B: Tienes C4 y C4', C6 y C6'<br/>historial duplicado 😵

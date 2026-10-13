@@ -1,0 +1,7 @@
+sequenceDiagram
+    participant R as Remoto (origin)
+    participant RR as origin/main (local)
+    participant M as main (local)
+    R->>RR: git fetch
+    RR->>M: git merge origin/main
+    Note over R,M: git pull = fetch + merge

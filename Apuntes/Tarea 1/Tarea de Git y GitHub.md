@@ -1,5 +1,9 @@
 # Tarea de GitHub
 
+> **Autor:** Martín Gil Blanco  
+> **Curso:** Control de versiones con Git en contextos académicos y profesionales  
+> Última revisión: octubre de 2026
+
 ## Objetivo
 
 Crea dos repositorios remotos, `repoA` y `repoB`, conectados a un único repositorio local y realiza las siguientes operaciones utilizando ramas, commits y comandos avanzados de Git.

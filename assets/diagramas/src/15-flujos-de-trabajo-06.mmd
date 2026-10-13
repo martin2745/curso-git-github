@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant Dev as Desarrollador/a
+    participant GH as GitHub
+    participant Rev as Revisor/a
+    Dev->>GH: git push -u origin funcionalidad1
+    Dev->>GH: Abrir PR funcionalidad1 → dev
+    GH->>Rev: Notificación de revisión
+    Rev->>GH: Comentarios / cambios solicitados
+    Dev->>GH: Nuevos commits (git push)
+    Rev->>GH: Aprobación ✅
+    Rev->>GH: Merge pull request
+    Dev->>Dev: git switch dev && git pull

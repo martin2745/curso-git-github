@@ -1,0 +1,6 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    L[("Repositorio local")]
+    L -- "push / fetch" --> O[("origin GitHub")]
+    L -- "push / fetch" --> G[("gitlab GitLab")]
+    U[("upstream repo original")] -- "fetch" --> L

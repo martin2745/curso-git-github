@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant WD as Directorio de trabajo
+    participant ST as Pila de stash
+    participant R as Repositorio
+    Note over WD: simple.html modificado
+    WD->>ST: git stash
+    Note over WD: Directorio limpio
+    WD->>R: commit "Arreglo rápido"
+    ST->>WD: git stash apply
+    Note over WD: simple.html modificado otra vez
+    WD->>R: commit "Terminados los cambios"
+    Note over ST: git stash drop → se elimina la entrada

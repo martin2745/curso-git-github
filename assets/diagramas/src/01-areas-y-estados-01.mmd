@@ -1,0 +1,9 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    WD["📁 Directorio de trabajo (working directory)"]
+    SA["📋 Área de preparación (staging area / index)"]
+    REPO[("🗄️ Repositorio (directorio .git)")]
+
+    WD -- "git add" --> SA
+    SA -- "git commit" --> REPO
+    REPO -- "git checkout / git switch / git restore" --> WD

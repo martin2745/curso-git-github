@@ -1,0 +1,6 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    subgraph PC["Ordenador local"]
+        WD["Archivo en uso"] -->|checkout| BD[("Base de datos de versiones v3 · v2 · v1")]
+        BD --> WD
+    end

@@ -1,0 +1,3 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    A["ssh-keygen"] --> B["Copiar clave .pub"] --> C["Añadirla en GitHub/GitLab"] --> D["ssh -T git@github.com"] --> E["git remote set-url origin git@…"] --> F["git push ✅"]

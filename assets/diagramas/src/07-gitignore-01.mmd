@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TD
+    A["Archivo nuevo en el directorio de trabajo"] --> B{"¿Coincide con algún patrón de .gitignore?"}
+    B -- "No" --> C["Aparece como Untracked en git status"]
+    B -- "Sí" --> D{"¿Hay un patrón posterior con ! que lo niegue?"}
+    D -- "Sí" --> C
+    D -- "No" --> E["Ignorado: no aparece en git status ni lo añade git add ."]
