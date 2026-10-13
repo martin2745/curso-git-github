@@ -1,0 +1,34 @@
+# Normalización de finales de línea (ver 21-finales-de-linea.md)
+# Los archivos de texto se guardan siempre con LF en el repositorio.
+* text=auto
+
+# Texto del proyecto: LF también en el directorio de trabajo
+*.md        text eol=lf
+*.mmd       text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.sh        text eol=lf
+.gitignore  text eol=lf
+.gitattributes text eol=lf
+
+# Scripts exclusivos de Windows
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+# Binarios: sin conversión ni diff de texto
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.zip       binary
+
+# Estadísticas de lenguajes de GitHub: los PDF son generados y el Markdown es documentación
+*.pdf       linguist-generated
+*.md        linguist-documentation
