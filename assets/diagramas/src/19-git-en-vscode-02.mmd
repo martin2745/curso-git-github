@@ -1,0 +1,11 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    subgraph Arriba["Versiones en conflicto"]
+        direction LR
+        I["Incoming: rama que entra"]
+        C["Current: tu rama (HEAD)"]
+    end
+    R["Result: archivo final editable"]
+    I -->|"Accept Incoming"| R
+    C -->|"Accept Current"| R
+    R --> M["Complete Merge y commit"]

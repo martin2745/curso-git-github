@@ -1,0 +1,10 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    A["Issue abierta #12"] --> B["Asignada, etiquetada y en un milestone"]
+    B --> C["Rama fix/12-login-ene"]
+    C --> D["Commits que mencionan #12"]
+    D --> E["Pull Request con Closes #12"]
+    E --> F["Revisión"]
+    F -->|"cambios solicitados"| D
+    F --> G["Merge en main"]
+    G --> H["Issue cerrada automáticamente"]

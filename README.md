@@ -46,6 +46,16 @@ Apuntes completos de **Git** y **GitHub**: desde los fundamentos del control de 
 | [15. Flujos de trabajo y colaboración](15-flujos-de-trabajo.md) | GitHub Flow, Git Flow, Pull Requests, *forks* |
 | [16. Referencia rápida de comandos](16-referencia-rapida.md) | Chuleta de comandos y glosario |
 
+### Bloque IV · Herramientas y práctica profesional
+
+| Tema | Contenido |
+|---|---|
+| [17. Cherry-pick](17-cherry-pick.md) | Llevar commits concretos de una rama a otra, rangos, conflictos |
+| [18. Issues, Projects y Releases](18-issues-y-releases.md) | Gestión del proyecto en GitHub, `Closes #12`, tableros, publicación de versiones, CLI `gh` |
+| [19. Git en VS Code](19-git-en-vscode.md) | Vista de control de código fuente, editor de fusión, extensiones, equivalencias botón ↔ comando |
+| [20. Errores frecuentes](20-errores-frecuentes.md) | Guía de síntomas, causas y soluciones de los errores más habituales |
+| [21. Finales de línea](21-finales-de-linea.md) | LF/CRLF, `core.autocrlf`, `.gitattributes`, `.editorconfig` |
+
 ### Tareas
 
 - [Tarea 1: un repositorio local con dos remotos](./Apuntes/Tarea%201/Tarea%20de%20Git%20y%20GitHub.md)

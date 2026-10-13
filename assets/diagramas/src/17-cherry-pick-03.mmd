@@ -1,0 +1,9 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TD
+    A["git cherry-pick hash"] --> B{"¿Hay conflicto?"}
+    B -->|No| C["Commit nuevo creado"]
+    B -->|Sí| D["Editar archivos y quitar marcadores"]
+    D --> E["git add archivo"]
+    E --> F["git cherry-pick --continue"]
+    F --> C
+    B -->|"Sí, prefiero cancelar"| G["git cherry-pick --abort"]

@@ -1,0 +1,4 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    R[("Repositorio: siempre LF")] -->|"checkout: LF a CRLF"| W["Directorio de trabajo en Windows: CRLF"]
+    W -->|"git add / commit: CRLF a LF"| R

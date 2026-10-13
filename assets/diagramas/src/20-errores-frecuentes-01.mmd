@@ -1,0 +1,9 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph LR
+    A{"¿Dónde está el problema?"}
+    A --> B["Cambios sin confirmar"] --> B1["git restore / git stash"]
+    A --> C["Último commit, sin publicar"] --> C1["git commit --amend / git reset"]
+    A --> D["Commit ya publicado"] --> D1["git revert"]
+    A --> E["Rama o commit perdido"] --> E1["git reflog"]
+    A --> F["Sincronización con el remoto"] --> F1["git pull / git push -u / SSH"]
+    A --> G["Operación a medias"] --> G1["--continue o --abort"]

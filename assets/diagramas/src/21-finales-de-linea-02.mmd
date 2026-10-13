@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TD
+    A{"¿Qué sistema usas?"} -->|Windows| B["git config --global core.autocrlf true"]
+    A -->|"Linux / macOS"| C["git config --global core.autocrlf input"]
+    B --> D["En cada repositorio: .gitattributes con * text=auto"]
+    C --> D
+    D --> E["En el editor: .editorconfig con end_of_line = lf"]

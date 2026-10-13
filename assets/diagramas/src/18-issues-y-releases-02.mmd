@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant L as Repositorio local
+    participant G as GitHub
+    participant U as Usuarios
+    L->>L: git tag -a v1.2.0 -m "Versión 1.2.0"
+    L->>G: git push origin v1.2.0
+    Note over G: Releases → Draft a new release
+    G->>G: Elegir tag, título y notas (Generate release notes)
+    G->>G: Adjuntar archivos y Publish release
+    G-->>U: Release v1.2.0 con notas y código comprimido

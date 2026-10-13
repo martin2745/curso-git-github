@@ -1,0 +1,7 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false}}}%%
+graph TB
+    A["Changes (archivos modificados)"] -->|"+ Stage"| B["Staged Changes (preparados)"]
+    B -->|"Commit"| C[("Repositorio local")]
+    C -->|"Sync Changes / Publish Branch"| D[("GitHub")]
+    D -->|"Pull / Sync Changes"| A
+    B -->|"− Unstage"| A

@@ -19,6 +19,8 @@
 - [Remotos](#remotos)
 - [Deshacer](#deshacer)
 - [Stash](#stash)
+- [GitHub CLI](#github-cli)
+- [Finales de línea](#finales-de-línea)
 - [SSH](#ssh)
 - [Glosario](#glosario)
 
@@ -117,7 +119,7 @@
 | `git rebase --onto A B C` | Rebase avanzado |
 | `git rebase -i HEAD~n` | Rebase interactivo |
 | `git rebase --continue` / `--skip` / `--abort` | Gestionar conflictos de rebase |
-| `git cherry-pick <commit>` | Aplicar un commit concreto en la rama actual |
+| `git cherry-pick [-x] <commit>` | Aplicar un commit concreto en la rama actual ([Tema 17](17-cherry-pick.md)) |
 
 ## Remotos
 
@@ -160,6 +162,23 @@
 | `git stash apply` / `pop` | Recuperar (sin borrar / borrando) |
 | `git stash drop` / `clear` | Borrar uno / todos |
 | `git stash branch <rama>` | Crear rama desde un stash |
+
+## GitHub CLI
+
+| Comando | Descripción |
+|---|---|
+| `gh auth login` | Iniciar sesión |
+| `gh issue create` / `list` / `close <n>` | Gestionar issues |
+| `gh pr create --fill` / `checkout <n>` / `merge <n>` | Gestionar Pull Requests |
+| `gh release create <tag> --generate-notes` | Publicar una release |
+
+## Finales de línea
+
+| Comando | Descripción |
+|---|---|
+| `git config --global core.autocrlf true` / `input` | Conversión en Windows / Linux-macOS |
+| `git ls-files --eol` | Ver el final de línea de cada archivo |
+| `git add --renormalize .` | Reaplicar `.gitattributes` a todo el repositorio |
 
 ## SSH
 
@@ -204,4 +223,4 @@
 
 ---
 
-[⬅ Anterior: Flujos de trabajo y colaboración](15-flujos-de-trabajo.md) · [Índice](README.md)
+[⬅ Anterior: Flujos de trabajo y colaboración](15-flujos-de-trabajo.md) · [Índice](README.md) · [Siguiente: Cherry-pick ➡](17-cherry-pick.md)
